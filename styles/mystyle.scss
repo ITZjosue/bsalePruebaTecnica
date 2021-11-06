@@ -1,0 +1,283 @@
+@import url('https://fonts.googleapis.com/css2?family=Akronim&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Serif+Pro:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Scheherazade+New&display=swap');
+$purple: #F7BEEE;
+$white:#F4E8F7;
+$black:#22222A;
+$akronim:'Akronim', cursive;
+$roboto:'Roboto', sans-serif;
+$serifPro:'Source Serif Pro', serif;
+$cherazade:'Scheherazade New', serif;
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background: $black;
+}
+.letterB{
+    color: $black;
+    font-family: $akronim;
+    font-size: 2em;
+}
+/*Styling the navbar*/
+
+.navbar_mystyle{
+    position: absolute;
+    top: 0;
+    z-index: 100;
+    width: 100%;
+    backdrop-filter: blur(5px);
+    a{
+        color: $black !important;
+        font-size: 1.2em;
+    }
+    .saleWord{
+        color: $black;
+        font-size: 1.5em;
+        font-family: $roboto;
+    }
+}
+
+/* Styling the carrousel */
+
+.carrousel_my_style{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    img{
+        width: 100%;
+        height: 100vh;
+        object-fit: cover;
+    }
+    .carousel-caption{
+        position: absolute;
+        top: 12%;
+        left: 20px;
+        height: 200px;
+        width: 500px;
+        background: rgba(252, 167, 255, 0.5);
+        backdrop-filter: blur(10px);
+        border-radius: 15px;
+        h5{
+            font-size: 3em;
+        }
+    }
+}
+
+/*Styling the popular articles section*/
+
+.popular_articles{
+    position: relative;
+    width: 100%;
+    h1{
+        font-family: $serifPro;
+        font-size: 3em;
+        padding: 15px;
+        color: $white;
+        margin-top: 15px;
+        border-radius: 15px;
+        @media (max-width:768px) {
+            font-size: 1.5em;
+        }
+    }
+    .card{
+        background:$white;
+        img{
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+        }
+        .btn-myStyle{
+            background: $purple;
+            color: $black;
+            font-weight: bold;
+        }
+        .btn-myStyle:hover{
+            background: #F8CFFF;
+        }
+    }
+    .card-body{
+        p{
+            font-family: $cherazade;
+        }
+        p:nth-child(1){
+            font-size: 1.5em;
+            font-weight: 600;
+            letter-spacing: 1px;
+        }
+        p:nth-child(2){
+            font-size: 1.2em;
+        }
+        p:nth-child(3){
+            font-size: 2em;
+        }
+    }
+}
+/* Offerts section styling */
+#discounts{
+    width: 100%;
+    padding: 15px;
+    position: relative;
+    .discount_banner{
+        background:black;
+        width: 90%;
+        height: 300px;
+        color: white;
+        border-radius: 15px;
+        overflow: hidden;
+        position: relative;
+        border:solid orange 5px;
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: blur(8px);
+        }
+        .offer_banner{
+            position: absolute;
+            top: 50%;
+            left: 5%;
+            transform: translateY(-50%);
+            width: 400px;
+            height: 50%;
+            background:rgba(0,0,0,0.7);
+            span{
+                font-family: $roboto;
+                font-size: 2em;
+            }
+            button{
+                background:#E19200;
+                width: 50%;
+                padding: 5px;
+                border-radius: 5px;
+                outline: none;
+                border: none;
+                font-family: $roboto;
+                margin:0 auto;
+            }
+            button:hover{
+                background: #FFA600;
+            }
+        }
+    }
+    @media (max-width:768px) {
+        .discount_banner{
+            width: 100%;
+            .offer_banner{
+                width: 300px;
+                span{
+                    font-size: 1em;
+                }
+                button{
+                    font-size: 0.8em;
+                }
+            }
+        }
+    }
+    @media (max-width:400px) {
+        .discount_banner{
+            position: relative;
+            .offer_banner{
+                width: 250px;
+                position: absolute;
+                top: 50%;
+                left: 0;
+            }
+
+        }
+    }
+}
+
+/* styling the catalog o products */
+
+#my_catalog{
+    .card{
+        width: 100%;
+        background: $white;
+        height: 500px;
+
+        img{
+        height: 300px;
+        object-fit: cover;
+        }
+        .card-body{
+            position: relative;
+            span:first-child{
+                position: absolute;
+                top: 5px;
+                left: 5px;
+                padding: 5px;
+                
+            }
+            span:nth-child(2){
+                position: absolute;
+                top: 5px;
+                right: 10px;
+                background: $purple;
+                padding: 5px;
+                border-radius: 5px;
+                cursor: pointer;
+            }
+            span:nth-child(2):hover{
+                background: #F8CFFF;
+            }
+            span:last-child{
+                position: relative;
+                top: 35px;
+            }
+        }
+    }
+}
+
+
+/*  Styliing the footer section */
+@mixin afooter{
+    padding: 5px;
+    text-decoration: none;
+    color: $white;
+    font-family: $roboto;
+    :hover{
+        color: $purple;
+    }
+}
+#footer{
+    width: 100%;
+    background: black;
+    height: auto;
+    border-top:solid 20px $purple;
+    border-bottom: solid 20px $purple;
+    .my_footer{
+        color: $white;
+        .social_media{
+            font-size: 2em;
+            a{
+                @include afooter;
+            }
+        }
+    }
+}
+.useful_links{
+    h3{
+        font-family: $roboto;
+        padding: 10px 0;
+    }
+    a{
+        display: block;
+        @include afooter;
+    }
+}
+.contact_footer{
+    h2{
+        font-family: $roboto;
+    }
+}
+.icons_footer{
+    display: flex;
+    margin: 10px 0;
+    p{
+        margin-left: 15px;
+    }
+}

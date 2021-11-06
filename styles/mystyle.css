@@ -1,0 +1,320 @@
+@import url("https://fonts.googleapis.com/css2?family=Akronim&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Source+Serif+Pro:wght@200&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Scheherazade+New&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background: #22222A;
+}
+
+.letterB {
+  color: #22222A;
+  font-family: "Akronim", cursive;
+  font-size: 2em;
+}
+
+/*Styling the navbar*/
+.navbar_mystyle {
+  position: absolute;
+  top: 0;
+  z-index: 100;
+  width: 100%;
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+}
+
+.navbar_mystyle a {
+  color: #22222A !important;
+  font-size: 1.2em;
+}
+
+.navbar_mystyle .saleWord {
+  color: #22222A;
+  font-size: 1.5em;
+  font-family: "Roboto", sans-serif;
+}
+
+/* Styling the carrousel */
+.carrousel_my_style {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+
+.carrousel_my_style img {
+  width: 100%;
+  height: 100vh;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.carrousel_my_style .carousel-caption {
+  position: absolute;
+  top: 12%;
+  left: 20px;
+  height: 200px;
+  width: 500px;
+  background: rgba(252, 167, 255, 0.5);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  border-radius: 15px;
+}
+
+.carrousel_my_style .carousel-caption h5 {
+  font-size: 3em;
+}
+
+/*Styling the popular articles section*/
+.popular_articles {
+  position: relative;
+  width: 100%;
+}
+
+.popular_articles h1 {
+  font-family: "Source Serif Pro", serif;
+  font-size: 3em;
+  padding: 15px;
+  color: #F4E8F7;
+  margin-top: 15px;
+  border-radius: 15px;
+}
+
+@media (max-width: 768px) {
+  .popular_articles h1 {
+    font-size: 1.5em;
+  }
+}
+
+.popular_articles .card {
+  background: #F4E8F7;
+}
+
+.popular_articles .card img {
+  width: 100%;
+  height: 400px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.popular_articles .card .btn-myStyle {
+  background: #F7BEEE;
+  color: #22222A;
+  font-weight: bold;
+}
+
+.popular_articles .card .btn-myStyle:hover {
+  background: #F8CFFF;
+}
+
+.popular_articles .card-body p {
+  font-family: "Scheherazade New", serif;
+}
+
+.popular_articles .card-body p:nth-child(1) {
+  font-size: 1.5em;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.popular_articles .card-body p:nth-child(2) {
+  font-size: 1.2em;
+}
+
+.popular_articles .card-body p:nth-child(3) {
+  font-size: 2em;
+}
+
+/* Offerts section styling */
+#discounts {
+  width: 100%;
+  padding: 15px;
+  position: relative;
+}
+
+#discounts .discount_banner {
+  background: black;
+  width: 90%;
+  height: 300px;
+  color: white;
+  border-radius: 15px;
+  overflow: hidden;
+  position: relative;
+  border: solid orange 5px;
+}
+
+#discounts .discount_banner img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-filter: blur(8px);
+          filter: blur(8px);
+}
+
+#discounts .discount_banner .offer_banner {
+  position: absolute;
+  top: 50%;
+  left: 5%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  width: 400px;
+  height: 50%;
+  background: rgba(0, 0, 0, 0.7);
+}
+
+#discounts .discount_banner .offer_banner span {
+  font-family: "Roboto", sans-serif;
+  font-size: 2em;
+}
+
+#discounts .discount_banner .offer_banner button {
+  background: #E19200;
+  width: 50%;
+  padding: 5px;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  font-family: "Roboto", sans-serif;
+  margin: 0 auto;
+}
+
+#discounts .discount_banner .offer_banner button:hover {
+  background: #FFA600;
+}
+
+@media (max-width: 768px) {
+  #discounts .discount_banner {
+    width: 100%;
+  }
+  #discounts .discount_banner .offer_banner {
+    width: 300px;
+  }
+  #discounts .discount_banner .offer_banner span {
+    font-size: 1em;
+  }
+  #discounts .discount_banner .offer_banner button {
+    font-size: 0.8em;
+  }
+}
+
+@media (max-width: 400px) {
+  #discounts .discount_banner {
+    position: relative;
+  }
+  #discounts .discount_banner .offer_banner {
+    width: 250px;
+    position: absolute;
+    top: 50%;
+    left: 0;
+  }
+}
+
+/* styling the catalog o products */
+#my_catalog .card {
+  width: 100%;
+  background: #F4E8F7;
+  height: 500px;
+}
+
+#my_catalog .card img {
+  height: 300px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+#my_catalog .card .card-body {
+  position: relative;
+}
+
+#my_catalog .card .card-body span:first-child {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  padding: 5px;
+}
+
+#my_catalog .card .card-body span:nth-child(2) {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  background: #F7BEEE;
+  padding: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#my_catalog .card .card-body span:nth-child(2):hover {
+  background: #F8CFFF;
+}
+
+#my_catalog .card .card-body span:last-child {
+  position: relative;
+  top: 35px;
+}
+
+/*  Styliing the footer section */
+#footer {
+  width: 100%;
+  background: black;
+  height: auto;
+  border-top: solid 20px #F7BEEE;
+  border-bottom: solid 20px #F7BEEE;
+}
+
+#footer .my_footer {
+  color: #F4E8F7;
+}
+
+#footer .my_footer .social_media {
+  font-size: 2em;
+}
+
+#footer .my_footer .social_media a {
+  padding: 5px;
+  text-decoration: none;
+  color: #F4E8F7;
+  font-family: "Roboto", sans-serif;
+}
+
+#footer .my_footer .social_media a :hover {
+  color: #F7BEEE;
+}
+
+.useful_links h3 {
+  font-family: "Roboto", sans-serif;
+  padding: 10px 0;
+}
+
+.useful_links a {
+  display: block;
+  padding: 5px;
+  text-decoration: none;
+  color: #F4E8F7;
+  font-family: "Roboto", sans-serif;
+}
+
+.useful_links a :hover {
+  color: #F7BEEE;
+}
+
+.contact_footer h2 {
+  font-family: "Roboto", sans-serif;
+}
+
+.icons_footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 10px 0;
+}
+
+.icons_footer p {
+  margin-left: 15px;
+}
+/*# sourceMappingURL=mystyle.css.map */
